@@ -7,7 +7,6 @@ const auth = getAuth(app);
 
 const AuthProvider = ({ children }) => {
     const [user, setUser] = useState(null);
-    const user1 = { displayName: 'Sajjad Mahmud' }
 
     const providerLogin = (provider) => {
         return signInWithPopup(auth, provider);
@@ -37,7 +36,7 @@ const AuthProvider = ({ children }) => {
 
     }, [])
 
-    const authInfo = { user1, providerLogin, logOut, createUser, signIn };
+    const authInfo = { user, providerLogin, logOut, createUser, signIn };
 
     return (
         <AuthContext.Provider value={authInfo}>
