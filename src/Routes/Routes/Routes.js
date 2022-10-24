@@ -5,12 +5,15 @@ import Home from "../../Pages/Home/Home/Home";
 import Login from "../../Pages/Login/Login/Login";
 import Register from "../../Pages/Login/Register/Register";
 import News from "../../Pages/News/News/News";
+import PageNotFound from "../../Pages/Shared/PageNotFound/PageNotFound";
 
 export const routes = createBrowserRouter([
     {
         path: '/',
         element: <Main></Main>,
+
         children: [
+
             {
                 path: '/',
                 element: <Home></Home>,
@@ -35,7 +38,10 @@ export const routes = createBrowserRouter([
             {
                 path: '/register',
                 element: <Register></Register>
-            }
-        ]
-    }
+            },
+
+        ],
+
+
+    },
 ]);
